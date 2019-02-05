@@ -1,5 +1,6 @@
 #Draw-rabbit 画种花家的兔子
 from turtle import *
+#import turtle as t
 
 # 无轨迹跳跃
 def my_goto(x, y):
@@ -104,8 +105,6 @@ def black_eyes():
     end_fill()
     my_goto(0, 0)
 
-
-
 # 脸
 def face():
     fd(183)
@@ -139,6 +138,32 @@ def head():
     begin_fill()
     circle(150, 280)
     end_fill()
+    # 耳朵
+    t.color((255, 255, 255), "white")
+    t.pu()
+    t.seth(90)
+    t.fd(-7)
+    t.seth(0)
+    t.fd(70)
+    t.pd()
+    t.begin_fill()
+    t.seth(100)
+    t.circle(-50, 50)
+    t.circle(-10, 120)
+    t.circle(-50, 54)
+    t.end_fill()
+    t.pu()
+    t.seth(90)
+    t.fd(-12)
+    t.seth(0)
+    t.fd(30)
+    t.pd()
+    t.begin_fill()
+    t.seth(100)
+    t.circle(-50, 50)
+    t.circle(-10, 120)
+    t.circle(-50, 56)
+    t.end_fill()
 
 # 画哆啦A梦
 def Doraemon():
@@ -302,5 +327,5 @@ if __name__ == '__main__':
     pensize(3)  # 画笔宽度
     speed(9)    # 画笔速度
     Doraemon()
-    my_goto(100, -300)
+    #my_goto(100, -300)
     mainloop()
